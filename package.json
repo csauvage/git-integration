@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "postinstall" : "sudo npm install gulp -g",  
     "test": "node test.js",
     "start": "gulp"
   },
