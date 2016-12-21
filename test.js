@@ -1,6 +1,6 @@
-var debugThrowError = false;
+let debugThrowError = true;
 if (debugThrowError) {
 	// throwing an error at any startup script will cause Travis to fail
-	throw new Error();
+	throw new Error('Erreur de build');
 	//
 }
