@@ -5,13 +5,9 @@ let Express = require('express');
 let app = Express();
 
 let messages = require('./messages.js');
-let port = 80;
+let port = 3000;
 
-//app.use(Express.static('./app'));
-
-app.get('/',(req,res)=>{
-	res.send('Hello World');
-});
+app.use(Express.static('./app'));
 
 app.get('/messages',(req,res)=>{
 	res.send(JSON.stringify(messages));
