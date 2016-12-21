@@ -7,7 +7,11 @@ let app = Express();
 let messages = require('./messages.js');
 let port = 80;
 
-app.use(Express.static('./app'));
+//app.use(Express.static('./app'));
+
+app.get('/',(req,res)=>{
+	res.send('Hello World');
+});
 
 app.get('/messages',(req,res)=>{
 	res.send(JSON.stringify(messages));
